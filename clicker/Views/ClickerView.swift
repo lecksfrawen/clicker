@@ -12,21 +12,8 @@ struct ClickerView: View {
     var body: some View {
         VStack {
             HStack {
-                Text("Conteo: \(appData.persons.count)")
                 Button(action: onAdd) {
-                    Text("Click me!")
-                }
-            }
-            List {
-                ForEach(appData.persons) { person in
-                    switch person.trackingType {
-                    case .clicker, .cameraOnAccessPoint:
-                        Text(person.id)
-                    case .wifi:
-                        Text(person.macAddress ?? "N/A")
-                    default:
-                        Text("Unknown")
-                    }
+                    Text("Simulate new person")
                 }
             }
         }
